@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Olá mundo - React Profissional</title>
+    <style>
+      .title {
+        color: #000;
+      }
+      .subtitle {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root2"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+      var e = React.createElement;
+
+      ReactDOM.render(
+        e(
+          'h1',
+          { className: 'title' },
+          'olá Mundo ',
+          e('br'),
+          e('small', { className: 'subtitle' }, 'olá react')
+        ),
+        document.getElementById('root')
+      );
+    </script>
+
+    <script type="text/babel">
+      ReactDom.render(
+        <h1> Olá Mundo Babel</h1>,
+        document.getElementById('root2')
+      );
+    </script>
+  </body>
+</html>
